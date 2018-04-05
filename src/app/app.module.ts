@@ -14,10 +14,15 @@ import {
   MatDatepickerModule, MatInputModule, MatNativeDateModule,
   MatIconModule, MatStepperModule
 } from '@angular/material';
+import {ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import {BackendserviceService} from "./backendservice.service";
+import { PartySpaceListComponent } from './party-space-list/party-space-list.component';
 
 const appRountes: Routes = [
   {path: '', pathMatch: 'full', component: HomepageComponentComponent},
-  {path: '**', component: HomepageComponentComponent}
+  {path: '**', component: HomepageComponentComponent},
+  {path: 'partySpace-List', component: PartySpaceListComponent}
 ];
 
 @NgModule({
@@ -26,7 +31,8 @@ const appRountes: Routes = [
     HomepageComponentComponent,
     HeaderComponent,
     FooterComponent,
-    QuestionBoxComponent
+    QuestionBoxComponent,
+    PartySpaceListComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,10 @@ const appRountes: Routes = [
     MatInputModule,
     MatNativeDateModule,
     MatIconModule,
-    MatStepperModule
+    MatStepperModule,
+    ReactiveFormsModule,
+    HttpClientModule
+
   ],
   exports: [
     MatDatepickerModule,
@@ -44,7 +53,7 @@ const appRountes: Routes = [
     MatStepperModule,
     MatIconModule
   ],
-  providers: [],
+  providers: [BackendserviceService],
   bootstrap: [AppComponent]
 })
 

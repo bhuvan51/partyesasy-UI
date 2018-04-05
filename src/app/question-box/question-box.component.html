@@ -1,6 +1,7 @@
 <div class="form-group vertical-spacing-bottom-8">
-  <h1 class="col-lg-12 collapse-padding">What are we celebrating today..!?</h1>
+  <h2 class="col-lg-12 collapse-padding">What are we celebrating today..!?</h2>
   <form [formGroup]="partyInfoForm" (submit)="onPartySumbit(partyInfoForm)">
-
+    <input type="tel" formControlName="city" name="city" class="form-control" id="city" placeholder="city">
+    <button type="submit" value="done">ok</button>
   </form>
 </div>
