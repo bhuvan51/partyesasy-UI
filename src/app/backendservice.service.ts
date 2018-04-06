@@ -5,7 +5,7 @@ import {Observable} from "rxjs/Observable";
 @Injectable()
 export class BackendserviceService {
 
-  userData = new Map();
+  partySpaceData = new Map();
   constructor(private http: HttpClient) {}
 
   private GATEWAY_PATH = 'https://ec2-34-205-159-85.compute-1.amazonaws.com:8443';
@@ -18,7 +18,13 @@ export class BackendserviceService {
     });
   }
 
-  setPartySpaces(data){
-    console.log(data, "in the set partyspaces nethod");
+  setPartySpaces(body) {
+    console.log(body, 'in the set partyspaces method');
+    this.partySpaceData.set('partySpaceList', body);
+    console.log('first object', body.toString());
+  }
+
+  getPartySpace() {
+    return this.partySpaceData;
   }
 }

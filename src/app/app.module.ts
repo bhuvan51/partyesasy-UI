@@ -21,8 +21,8 @@ import { PartySpaceListComponent } from './party-space-list/party-space-list.com
 
 const appRountes: Routes = [
   {path: '', pathMatch: 'full', component: HomepageComponentComponent},
-  {path: '**', component: HomepageComponentComponent},
-  {path: 'partySpace-List', component: PartySpaceListComponent}
+  {path: 'partySpace-List', component: PartySpaceListComponent},
+  {path: '**', component: HomepageComponentComponent}
 ];
 
 @NgModule({

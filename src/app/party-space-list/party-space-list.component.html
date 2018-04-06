@@ -1,3 +1,23 @@
 <h1>
-  party-space-list works!
+  party-space-list:
+
 </h1>
+<h1>
+  ---------------------------------------------------------------------
+
+</h1>
+<div>
+  <ul *ngFor="let partySpace of newValues?.partySpaces" >
+    <h3>{{partySpace.name}}</h3>
+    <h5>{{partySpace.description}}</h5>
+    {{partySpace.email}}
+    {{partySpace.address?.address_line1}}
+    {{partySpace.address?.address_line2}}
+    {{partySpace.address?.phone_number1}}
+    <h1>
+      ---------------------------------------------------------------------
+
+    </h1>
+  </ul>
+</div>
+

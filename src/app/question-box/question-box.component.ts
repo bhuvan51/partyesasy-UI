@@ -30,9 +30,9 @@ export class QuestionBoxComponent implements OnInit {
         (data) => {
           console.log(data.body, 'data===');
           this.backendService.setPartySpaces(data.body);
-          this.router.navigate(['/partySpace-List']);
+          this.router.navigateByUrl('/partySpace-List');
         },
-        (error: Response)=>{
+        (error: Response) => {
           console.log(error);
         }
       );
